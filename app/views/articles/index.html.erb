@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8">
-      <h1>Listing Entries</h1>
+      <h1>All Articles</h1>
       <div class="articles">
         <% @articles.each do |article| %>
           <div class="index-article">
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <h1>New Entries:</h1>
+      <h1>New Articles:</h1>
       <% @articles.each do |article| %>
       <%= link_to article_path(article) do %>
       <p><%= article.title %></p>
