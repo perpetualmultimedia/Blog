@@ -11,7 +11,7 @@ img{
         <% @articles.each do |article| %>
           <div class="index-article" data-no-turbolink>
             <h3><%= article.title %></h3>
-            <p><%= sanitize article.text %></p>
+            <p><%= sanitize article.text.truncate(460) %></p>
             <td><%= link_to 'Show', article_path(article), class: "btn btn-success btn-md" %></td>
             <td><%= link_to 'Edit', edit_article_path(article), class: "btn btn-warning btn-md" %></td>
             <td><%= link_to 'Destroy', article_path(article), class: "btn btn-danger btn-md" ,
