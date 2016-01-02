@@ -15,9 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require tinymce
-$(document).on(‘page:receive’,function(){
-tinymce.remove();
-});
+
 $(document).on(‘ready page:load’, (function(){
 tinyMCE.init({
 selector: “textarea.tinymce”
