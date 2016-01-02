@@ -148,6 +148,9 @@ body{
 .index-article:nth-child(even){
   text-align: right;
 }
+.index-article img{
+  display: none;
+}
 
 @media only screen and (max-width : 768px){
   .article-date{
