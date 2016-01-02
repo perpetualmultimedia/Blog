@@ -21,7 +21,7 @@
       <span class="iconic iconic-inkwell iconic-md logo" title="inkwell" ></span>
     </div>
 
-    <div class="jumbotron">
+    <div class="jumbotron"  data-no-turbolink>
       <% if controller_name == "articles" && action_name == "show" or controller_name == "articles" && action_name == "new" or controller_name == "articles" && action_name == "edit" %>
 
         <%= link_to "Back", articles_path, class: "btn btn-lg btn-primary btn-back" %>
