@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require tinymce
+$(document).ready(function(){
+	tinymce.remove();
+	tinyMCE.init({
+	selector: "textarea.tinymce"
+	});
+});
