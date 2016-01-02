@@ -148,7 +148,7 @@ body{
 .index-article:nth-child(even){
   text-align: right;
 }
-.index-article img{
+.index-article > img{
   display: none;
 }
 
