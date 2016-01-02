@@ -1,11 +1,12 @@
-<p>
-  <strong>
-    <%= comment.commenter %>
-  </strong>
-  <%= link_to 'x', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-md btn-danger pull-right" %>
+<div class="comment">
+  <p>
+    <strong>
+      <%= comment.commenter %>
+    </strong>
+    <%= link_to 'x', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-md btn-danger pull-right" %>
 
-</p>
-
-<p>
-  <%= comment.body %>
-</p>
+  </p>
+  <p>
+    <%= comment.body %>
+  </p>
+</div>
