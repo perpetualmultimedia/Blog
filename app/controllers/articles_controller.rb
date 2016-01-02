@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-TinyMCE::Rails::Helper
+
   def index
     @articles = Article.all
   end
