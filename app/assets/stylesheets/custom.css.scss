@@ -1,0 +1,137 @@
+$brand-success: #1B5299;
+$brand-info: #559CAD;
+$brand-danger: #92374D;
+$brand-warning: #8C5383;
+$brand-primary: #1B5299;
+
+$navbar-default-bg: #2C5287;
+$navbar-height: 70px;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-bg: #ECF0F1;
+$navbar-default-link-active-color: #ECF0F1;
+$navbar-padding-horizontal: 0;
+$navbar-collapse-max-height: 450px;
+$border-radius-base: 0px;
+$border-radius-small: 0px;
+$border-radius-large: 0px;
+$alert-border-radius: 0px;
+
+$font-family-sans-serif: "Montserrat";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body{
+  background-color: #FCFAFA;
+}
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+.header{
+  border-bottom: solid;
+  border-bottom-color: #000;
+  padding-top:10px;
+  padding-bottom: -30px;
+}
+.jumbotron{
+  background: transparent;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.btn-back{
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.btn-new {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+.logo{
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 100px;
+}
+.md-show{
+  display:block;
+}
+.lg-show{
+  display: none;
+}
+#blogPost{
+  font-family: "Montserrat";
+}
+.comments{
+  margin-top: 20px;
+}
+.footer{
+  margin-top:10px;
+  padding-top:50px;
+  padding-bottom:50px;
+  font-size: 20px;
+  border-top: solid;
+  border-top-color: #000;
+  text-align: center;
+}
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .wrapper{
+      width:320px;
+    }
+    .logo{
+      left:230px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .wrapper{
+    width:480px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .wrapper{
+    width:768px;
+  }
+  .logo{
+    left:340px;
+  }
+  .md-show{
+    display:none;
+  }
+  .lg-show{
+    display: block;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .wrapper{
+    width:992px;
+  }
+  .logo{
+    left:440px;
+
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .wrapper{
+    width:1200px;
+  }
+  .logo{
+    left:540px;
+  }
+}
+.index-article:nth-child(even){
+  text-align: right;
+}

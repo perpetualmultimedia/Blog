@@ -1,0 +1,13 @@
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter, type: "text", class: "form-control", placeholder: "Your Cool Name" %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body, id: "blogPost", class: "form-control", rows: "2", placeholder: "Be nice..." %>
+  </p>
+  <p>
+    <%= f.submit 'Submit Comment', class: "btn-md btn btn-block btn-info" %>
+  </p>
+<% end %>

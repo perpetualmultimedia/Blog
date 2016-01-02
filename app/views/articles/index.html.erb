@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Listing Entries</h1>
+      <div class="articles">
+        <% @articles.each do |article| %>
+          <div class="index-article">
+            <h3><%= article.title %></h3>
+            <p><%= article.text %></p>
+            <td><%= link_to 'Show', article_path(article), class: "btn btn-success btn-md" %></td>
+            <td><%= link_to 'Edit', edit_article_path(article), class: "btn btn-warning btn-md" %></td>
+            <td><%= link_to 'Destroy', article_path(article), class: "btn btn-danger btn-md" ,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h1>New Entries:</h1>
+      <% @articles.each do |article| %>
+      <%= link_to article_path(article) do %>
+      <p><%= article.title %></p>
+      <% end %>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>
+<br>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <title>A Very Simple Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'></head>
+
+</head>
+<body>
+<div class="header">
+  <div class="wrapper">
+    <div class="lg-show">
+      <span class="iconic iconic-inkwell iconic-lg logo" title="inkwell" ></span>
+    </div>
+    <div class="md-show">
+      <span class="iconic iconic-inkwell iconic-md logo" title="inkwell" ></span>
+    </div>
+
+    <div class="jumbotron">
+      <% if controller_name == "articles" && action_name == "show" or controller_name == "articles" && action_name == "new" or controller_name == "articles" && action_name == "edit" %>
+
+        <%= link_to "Back", articles_path, class: "btn btn-lg btn-primary btn-back" %>
+      <% end %>
+      <% if controller_name == "articles" && action_name == "index" or controller_name == "articles" && action_name == "show" %>
+
+      <%= link_to 'New article', new_article_path, class: "btn btn-info btn-lg btn-new" %>
+
+      <% end %>
+
+      <h1> A Very Simple Blog </h1>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+
+<%= yield %>
+</div>
+<div class="footer">
+  <a href="http://www.perpetualsite.com">Created by Colton Hagan, President of Perpetual Multimedia</a>
+</div>
+</body>
+
+</html>
