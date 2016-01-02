@@ -18,6 +18,8 @@ gem 'pg'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'rmagick'
+gem 'tinymce-rails'
+
 
 
 group :development, :test do
