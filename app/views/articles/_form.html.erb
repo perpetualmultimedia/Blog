@@ -1,5 +1,6 @@
 <%= form_for @article do |f| %>
-
+<%= tinymce_assets %>
+#=> <script type="text/javascript" src="/assets/tinymce.js">
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
