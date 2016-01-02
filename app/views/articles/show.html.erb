@@ -1,13 +1,21 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
-        <h2>
-          <%= @article.title %>
-        </h2>
-
-        <p>
-          <%= @article.text.html_safe %>
-        </p>
+        <div class="container-fluid">
+          <div class="row">
+            <h2 class="pull-left">
+              <%= @article.title %>
+            </h2>
+            <h2 class="pull-right">
+              <%= @article.created_at.strftime("%b %d, %Y") %>
+            </h2>
+          </div>
+          <div class="row">
+          <p>
+            <%= @article.text.html_safe %>
+          </p>
+          </div>
+        </div>
           <div class="container-fluid comments">
             <div class="row">
               <% @article.comments.any? do %>
