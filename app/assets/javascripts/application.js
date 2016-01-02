@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+var ready;
+ready = function() {
+  $('.ckeditor').ckeditor({
+    // optional config
+  });
+};
+$(document).ready(ready);
+$(window).load(ready);
